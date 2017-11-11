@@ -6,4 +6,6 @@ The ADAT signal can carry 8 channels of 24bits audio at 44.1kHz or 48kHz. The Te
 
 The encoding is done using NZRI encoding in packets of 8 bit for which 4 lookup tables are made, so that the memory needed for the lookup for NZRI encoding is 4KB. In the encoding of a frame (containing 8ch 16 bit audio) a frame contains 256 bits, which is twice the datarate of the SPDIF output in the Teensy audio library. In order to support that I used multipliers at a samplerate speed twice as high as compared to the SPDIF example. There is a lot bitshifting and XORring involved, so the ADAT output object is relatively CPU-expensive to use (I guess). I am relatively new to C++ and the Teensy, so if anyone has some optimalisations or improvements, please let me know!
 
+For a real demonstration see : https://youtu.be/e5ov3q02zxo
+
 Happy audio programming for the Teensy!
